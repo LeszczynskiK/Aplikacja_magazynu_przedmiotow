@@ -13,9 +13,13 @@ komendy.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
 iostream
 -
+string
+-
 
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/main.cpp
 iostream
+-
+string
 -
 komendy.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
