@@ -1,0 +1,1 @@
+# Aplikacja_magazynu_przedmiotow
