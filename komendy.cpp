@@ -6,6 +6,8 @@ int ilosc;
 string opis;
 string kategoria;
 
+vector<Produkt<string, float, string, string>> magazyn;//vector with item based on class Product
+
 void first_info()
 {
     cout << "Witaj w symulatorze obslugi magazynu!" << endl;

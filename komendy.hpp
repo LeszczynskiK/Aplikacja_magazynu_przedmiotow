@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+
+#include "obiekt.hpp"
+
 using namespace std;
 
 void first_info();//1st message in app - welcome etc...
