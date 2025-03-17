@@ -1,0 +1,3 @@
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/rebuild_cache.dir
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/edit_cache.dir
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/MyExecutable.dir

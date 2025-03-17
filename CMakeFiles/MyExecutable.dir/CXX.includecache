@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.cpp
+komendy.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
+iostream
+-
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/main.cpp
+iostream
+-
+komendy.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
+
