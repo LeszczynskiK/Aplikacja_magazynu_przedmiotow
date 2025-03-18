@@ -29,7 +29,7 @@ int your_choice();           // your choise of operation
 void open_fun(Magazyn &mag); // funcitonality action based on your choose - with the reference to Magazyn object! (we will work on input type of Magazyn)
 
 //functions to load data and check is typped data is correct type...
-string getString(const string&);//arguments are string becouse we get argument which will be displayed later
+string getString(const string&);//arguments are string becouse we get argument which will be displayed later, bool to check if we are in your_choice()
 float getFloat(const string&);
 int getInt(const string&);
 Kategoria getCategory(const string&);

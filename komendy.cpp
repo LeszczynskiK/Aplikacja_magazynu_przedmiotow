@@ -13,25 +13,7 @@ void first_info()
      cout << endl;
 }
 
-int your_choice()
-{
-     //number of option(option is displayed in first_info())
-     int temp1;
-     cout << "Wybor: ";
-     cin >> temp1;
-
-     while (temp1 < 1 || temp1 > 6) // can be only 1,2,3,4,5,6 - any over/bellow this is wrong choice! int type
-     {
-          //manage wrong input (get input once again - will we get correct one!)
-          system("clear");
-          cout << "Wybor niepoprawny... " << endl;
-          cout << "Wybierz jeszcze raz!" << endl;
-          cout << "Wybor: ";
-          cin >> temp1;
-     }
-     return temp1; // operation choise is returned
-}
-
+bool your_choice_bool = false;//are we in your_choice function? 
 
 //get not empty string as input
 string getString(const string& msg)//msg is value which we put in and display here...
@@ -44,6 +26,7 @@ string getString(const string& msg)//msg is value which we put in and display he
           cin >> input;
           if (input.empty()) 
           {
+               system("clear");
                cout << "Wartosc nie moze byc pusta! Wprowadz ponownie." << endl;
           }
 
@@ -62,8 +45,10 @@ float getFloat(const string& msg)//msg is value which we put in and display here
           cin >> value;
           if (cin.fail() || value < 0) //cin.fail() - if typped other than declarated type, will return 1 so fail..
           {
+               system("clear");
               cout << "Wartosc musi byc liczba nieujemna! Wprowadz ponownie." << endl;
               cin.clear(); //clear fail flag
+              cin.ignore();//clear buffor
           } else {
                correct_float = true;//correct data was written, change bool variable to true
           }
@@ -82,8 +67,19 @@ int getInt(const string& msg)//msg is value which we put in and display here...
           cin >> value;
           if (cin.fail() || value < 0) //if <0 and not int, fail
           {
+               system("clear");
               cout << "Wartosc musi byc liczba calkowita nieujemna! Wprowadz ponownie." << endl;
               cin.clear();//clear error flag
+              cin.ignore();//clear buffor
+              if(your_choice_bool)//if we are in your_choice function now, print this
+               {
+                    cout << "1. Dodawanie nowych produktów do magazynu" << endl;
+                    cout << "2. Usuwanie istniejących produktów" << endl;
+                    cout << "3. Edytowanie szczegółów produktu" << endl;
+                    cout << "4. Kopiowanie produktów" << endl;
+                    cout << "5. Wyświetlanie zawartości magazynu" << endl;
+                    cout << "6. Wyjscie z aplikacji... " << endl<<endl;
+               }
           } else {
                correct_int = true;//correct data was written, change bool variable to true
           }
@@ -102,14 +98,43 @@ Kategoria getCategory(const string& msg)//msg is value which we put in and displ
            cout <<msg;
            cin >> value;
            if (cin.fail() || value < 0 || value > 2) {//have to be int type, and have to be 0,1, or 2
+               system("clear");
                cout << "Kategoria musi byc liczba calkowita od 0 do 2! Wprowadz ponownie." << endl;
                cin.clear();//clear error flag
+               cin.ignore();//clear buffor
            } else {
             correct_kategoria = true;//correct data was written, change bool variable to true
            }
        } while (!correct_kategoria);//loop untill you get correct input
 
        return static_cast<Kategoria>(value);//int have to be changed on Kategoria type
+}
+
+int your_choice()
+{
+     your_choice_bool = true;//means that we are in this funciton right now!
+
+     //number of option(option is displayed in first_info())
+     int temp1 = getInt("Wybor: ");
+
+     if (temp1 < 1 || temp1 > 6) // can be only 1,2,3,4,5,6 - any over/bellow this is wrong choice! int type
+     {
+          //manage wrong input (get input once again - will we get correct one!)
+          system("clear");
+          cout << "Wybor niepoprawny... " << endl;
+          cout << "Wybierz jeszcze raz!" << endl<<endl;
+
+          cout << "1. Dodawanie nowych produktów do magazynu" << endl;
+          cout << "2. Usuwanie istniejących produktów" << endl;
+          cout << "3. Edytowanie szczegółów produktu" << endl;
+          cout << "4. Kopiowanie produktów" << endl;
+          cout << "5. Wyświetlanie zawartości magazynu" << endl;
+          cout << "6. Wyjscie z aplikacji... " << endl<<endl;
+          cout << "Wybor: ";
+          cin >> temp1;
+     }
+     your_choice_bool = false;//means that we are leavig this funciton right now!
+     return temp1; // operation choise is returned
 }
 
 void Magazyn::addItem()//add new item
