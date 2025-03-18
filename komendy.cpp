@@ -32,35 +32,97 @@ int your_choice()
      return temp1; // operation choise is returned
 }
 
+
+//get not empty string as input
+string getString(const string& msg)//msg is value which we put in and display here...
+{
+     string input;//string tye input
+
+     do//load nazwa untill is not empty - can be any type becouse its string, but can not be empty
+     {
+          cout <<msg;
+          cin >> input;
+          if (input.empty()) 
+          {
+               cout << "Wartosc nie moze byc pusta! Wprowadz ponownie." << endl;
+          }
+
+     } while (input.empty());
+
+     return input;
+}
+
+//get not empty float(with some conditions on it) as input
+float getFloat(const string& msg)//msg is value which we put in and display here...
+{
+     float value;
+     bool correct_float;
+     do {
+          cout <<msg;
+          cin >> value;
+          if (cin.fail() || value < 0) //cin.fail() - if typped other than declarated type, will return 1 so fail..
+          {
+              cout << "Wartosc musi byc liczba nieujemna! Wprowadz ponownie." << endl;
+              cin.clear(); //clear fail flag
+          } else {
+               correct_float = true;//correct data was written, change bool variable to true
+          }
+      } while (!correct_float);//loop untill you get correct price\
+
+      return value;
+}
+
+//get not empty int(with some conditions on it) as input
+int getInt(const string& msg)//msg is value which we put in and display here...
+{
+     bool correct_int = false;//ilosc can not be <0 and have to be int
+     int value;
+      do {
+          cout <<msg;
+          cin >> value;
+          if (cin.fail() || value < 0) //if <0 and not int, fail
+          {
+              cout << "Wartosc musi byc liczba calkowita nieujemna! Wprowadz ponownie." << endl;
+              cin.clear();//clear error flag
+          } else {
+               correct_int = true;//correct data was written, change bool variable to true
+          }
+      } while (!correct_int);//loop untill you get correct ilosc
+
+      return value;
+}
+
+//get value 0,1,2 to use it later to enum type
+Kategoria getCategory(const string& msg)//msg is value which we put in and display here...
+{
+       // based on enum type(so put 0,1 or 2)
+       bool correct_kategoria = false;
+       int value;
+       do {
+           cout <<msg;
+           cin >> value;
+           if (cin.fail() || value < 0 || value > 2) {//have to be int type, and have to be 0,1, or 2
+               cout << "Kategoria musi byc liczba calkowita od 0 do 2! Wprowadz ponownie." << endl;
+               cin.clear();//clear error flag
+           } else {
+            correct_kategoria = true;//correct data was written, change bool variable to true
+           }
+       } while (!correct_kategoria);//loop untill you get correct input
+
+       return static_cast<Kategoria>(value);//int have to be changed on Kategoria type
+}
+
 void Magazyn::addItem()//add new item
 {
      system("clear");
      cout << "1. Dodawanie nowych produktów do magazynu" << endl
           << endl;
 
-     string nazwa;
-     string opis;
-     float cena;
-     int ilosc;
-     int kat;
-
-     cout << "Nazwa: ";
-     cin >> nazwa;
-
-     cout << "Cena: ";
-     cin >> cena;
-
-     cout << "Ilosc: ";
-     cin >> ilosc;
-
-     cout << "Opis: ";
-     cin >> opis;
-
-     // based on enum type(so put 0,1 or 2)
-     cout << "Kategoria (0-ZWIERZETA, 1-ELEKTRONIKA, 2-DOM): "; // only 0,1,2 is acceptable
-     cin >> kat;
-
-     Kategoria kategoria = static_cast<Kategoria>(kat); // cast kat(int type) to Kategoria type(and save it to kategoria variable)
+          string nazwa = getString("Nazwa: ");
+          float cena = getFloat("Cena: ");
+          int ilosc = getInt("Ilosc: ");
+          string opis = getString("Opis: ");
+          Kategoria kategoria = getCategory("Kategoria (0-ZWIERZETA, 1-ELEKTRONIKA, 2-DOM): ");
 
      magazyn.push_back(Produkt<string, float, string, Kategoria>(nazwa, cena, ilosc, opis, kategoria)); // save this object in vector(i want Producs to have this type of arguments...)
      cout << "Produkt dodany!" << endl;                                                                 // inform that adding suceed
@@ -72,9 +134,7 @@ void Magazyn::deleteItem()//delete item from vector
      cout << "2. Usuwanie istniejących produktow" << endl
           << endl;
 
-     string nazwa;
-     cout << "Podaj nazwe produktu do usuniecia: ";
-     cin >> nazwa; // put name of item  - delete item will base on this name here
+     string nazwa = getString("Nazwa do usuniecia przedmiotu: ");
 
      auto it = remove_if(magazyn.begin(), magazyn.end(),
                          [&nazwa](Produkt<string, float, string, Kategoria> &p) // lambda funciton - get nazwa, arguments is object Product with specyfic arguments(its name is p - will ge tinto with reference)
@@ -99,9 +159,8 @@ void Magazyn::editItem()//edid existing in vector item
      cout << "3. Edytowanie szczegolow produktu" << endl
           << endl;
 
-     string nazwa;
-     cout << "Podaj nazwe produktu do edycji: ";
-     cin >> nazwa; // put name of item  - edit item will base on this name here
+   
+          string nazwa = getString("Nazwa do edycji przedmiotu: ");
 
      for (auto &produkt : magazyn)//work on oryginal producs(reference)
      { // iterate throw vector
@@ -109,15 +168,10 @@ void Magazyn::editItem()//edid existing in vector item
           { // if your typeed name found...
 
                // edit rest of fields here
-               cout << "Nowa cena: ";
-               cin >> produkt.cena;
-
-               cout << "Nowa ilosc: ";
-               cin >> produkt.ilosc;
-
-               cout << "Nowy opis: ";
-               cin >> produkt.opis;
-
+               produkt.cena = getFloat("Nowa cena: ");
+               produkt.ilosc = getInt("Nowa ilosc: ");
+               produkt.opis = getString("Nowy opis: ");
+               
                cout << "Produkt zaktualizowany!" << endl; // and inform that changed
                return;
           }
@@ -131,9 +185,8 @@ void Magazyn::copyItem()//copy item which exist in vector
      cout << "4. Kopiowanie produktów" << endl
           << endl;
 
-     string nazwa;
-     cout << "Podaj nazwe produktu do skopiowania: ";
-     cin >> nazwa;
+   
+     string nazwa = getString("Nazwa do skopiowania przedmiotu: ");
 
      for (auto &produkt : magazyn)
      { // iterate throw vector
