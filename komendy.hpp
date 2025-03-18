@@ -13,6 +13,7 @@ class Magazyn
 { // class to manage warehouse
 private:
     vector<Produkt<string, float, string, Kategoria>> magazyn; // we need to pass type of: nazwa,cena,opis,kategoria(this is enum type)
+    //so it will be string, float, string and enum type(Kategoria - 3 possibilities to work on here 0,1,2)
 
 public:
     // methods to work on warehouse
@@ -25,6 +26,6 @@ public:
 
 void first_info();           // 1st message in app - welcome etc...
 int your_choice();           // your choise of operation
-void open_fun(Magazyn &mag); // funcitonality action based on your choose
+void open_fun(Magazyn &mag); // funcitonality action based on your choose - with the reference to Magazyn object! (we will work on input type of Magazyn)
 
 #endif // KOMENDY_HPP

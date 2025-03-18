@@ -3,6 +3,7 @@
 
 void first_info()
 {
+     //inform about possible ways to work with!
      cout << "1. Dodawanie nowych produktów do magazynu" << endl;
      cout << "2. Usuwanie istniejących produktów" << endl;
      cout << "3. Edytowanie szczegółów produktu" << endl;
@@ -14,12 +15,14 @@ void first_info()
 
 int your_choice()
 {
+     //number of option(option is displayed in first_info())
      int temp1;
      cout << "Wybor: ";
      cin >> temp1;
 
      while (temp1 < 1 || temp1 > 6) // can be only 1,2,3,4,5,6 - any over/bellow this is wrong choice! int type
      {
+          //manage wrong input (get input once again - will we get correct one!)
           system("clear");
           cout << "Wybor niepoprawny... " << endl;
           cout << "Wybierz jeszcze raz!" << endl;
@@ -29,7 +32,7 @@ int your_choice()
      return temp1; // operation choise is returned
 }
 
-void Magazyn::addItem()
+void Magazyn::addItem()//add new item
 {
      system("clear");
      cout << "1. Dodawanie nowych produktów do magazynu" << endl
@@ -63,7 +66,7 @@ void Magazyn::addItem()
      cout << "Produkt dodany!" << endl;                                                                 // inform that adding suceed
 }
 
-void Magazyn::deleteItem()
+void Magazyn::deleteItem()//delete item from vector
 {
      system("clear");
      cout << "2. Usuwanie istniejących produktow" << endl
@@ -76,10 +79,10 @@ void Magazyn::deleteItem()
      auto it = remove_if(magazyn.begin(), magazyn.end(),
                          [&nazwa](Produkt<string, float, string, Kategoria> &p) // lambda funciton - get nazwa, arguments is object Product with specyfic arguments(its name is p - will ge tinto with reference)
                          {
-                              return p.nazwa == nazwa; // return 1 if found item with typped by us fields
+                              return p.nazwa == nazwa; // return 1 if found item with typped by us fields(typped name exist)
                          });
 
-     if (it != magazyn.end())
+     if (it != magazyn.end())//if we did not get to the end of vector
      {                                      // if iterator is not on the end of vector
           magazyn.erase(it, magazyn.end()); // means we found item, so can erase it!
           cout << "Produkt usuniety!" << endl;
@@ -90,7 +93,7 @@ void Magazyn::deleteItem()
      }
 }
 
-void Magazyn::editItem()
+void Magazyn::editItem()//edid existing in vector item
 {
      system("clear");
      cout << "3. Edytowanie szczegolow produktu" << endl
@@ -100,7 +103,7 @@ void Magazyn::editItem()
      cout << "Podaj nazwe produktu do edycji: ";
      cin >> nazwa; // put name of item  - edit item will base on this name here
 
-     for (auto &produkt : magazyn)
+     for (auto &produkt : magazyn)//work on oryginal producs(reference)
      { // iterate throw vector
           if (produkt.nazwa == nazwa)
           { // if your typeed name found...
@@ -122,7 +125,7 @@ void Magazyn::editItem()
      cout << "Nie znaleziono produktu!" << endl;
 }
 
-void Magazyn::copyItem()
+void Magazyn::copyItem()//copy item which exist in vector
 {
      system("clear");
      cout << "4. Kopiowanie produktów" << endl
@@ -144,7 +147,7 @@ void Magazyn::copyItem()
      cout << "Nie znaleziono produktu!" << endl;
 }
 
-void Magazyn::displayItems()
+void Magazyn::displayItems()//display all items which are in vector
 {
      system("clear");
      cout << "5. Wyswietlanie zawartości magazynu" << endl
@@ -168,7 +171,7 @@ void open_fun(Magazyn &mag)
 { // this methor is to call method which you choose(with the argument of vector which collects items)
      while (true)
      {
-          first_info();
+          first_info();//show possible operations to work on
           int opt = your_choice(); // get value (number) of your method choose
 
           switch (opt)
