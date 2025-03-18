@@ -3,7 +3,9 @@
 
 CMakeFiles/MyExecutable.dir/komendy.cpp.o: komendy.cpp
 CMakeFiles/MyExecutable.dir/komendy.cpp.o: komendy.hpp
+CMakeFiles/MyExecutable.dir/komendy.cpp.o: obiekt.hpp
 
 CMakeFiles/MyExecutable.dir/main.cpp.o: komendy.hpp
 CMakeFiles/MyExecutable.dir/main.cpp.o: main.cpp
+CMakeFiles/MyExecutable.dir/main.cpp.o: obiekt.hpp
 

@@ -9,18 +9,22 @@
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.cpp
 komendy.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
+algorithm
+-
 
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
 iostream
 -
 string
 -
+vector
+-
+obiekt.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
 
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/main.cpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
 iostream
 -
 string
 -
-komendy.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
 

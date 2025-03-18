@@ -16,6 +16,7 @@ set(SOURCES
 # Heading files
 set(HEADERS
     komendy.hpp
+    obiekt.hpp
 )
 
 #Make executable file
