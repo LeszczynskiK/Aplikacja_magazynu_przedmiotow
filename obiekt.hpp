@@ -7,13 +7,13 @@ using namespace std;
 
 enum class Kategoria // kategoria base on these types, cant be created ny more option!
 {
-    //3 categories of object are avaiable so far - will work only on these types!
-    ZWIERZETA,//0
-    ELEKTRONIKA,//1
-    DOM//2
+    // 3 categories of object are avaiable so far - will work only on these types!
+    ZWIERZETA,   // 0
+    ELEKTRONIKA, // 1
+    DOM          // 2
 };
 
-template <typename T1, typename T2, typename T3, typename T4>//4 types from 5 can be random type (set in object creating)
+template <typename T1, typename T2, typename T3, typename T4> // 4 types from 5 can be random type (set in object creating)
 class Produkt
 {
 public:
@@ -41,7 +41,7 @@ public:
         cout << "Kategoria: ";
 
         // based on enum type
-        switch (kategoria)//categoria can be 0,1 or 2
+        switch (kategoria) // categoria can be 0,1 or 2
         {
         case Kategoria::ZWIERZETA:
             cout << "ZWIERZETA";

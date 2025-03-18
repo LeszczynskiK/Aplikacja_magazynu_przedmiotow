@@ -3,7 +3,7 @@
 
 void first_info()
 {
-     //inform about possible ways to work with!
+     // inform about possible ways to work with!
      cout << "1. Dodawanie nowych produktów do magazynu" << endl;
      cout << "2. Usuwanie istniejących produktów" << endl;
      cout << "3. Edytowanie szczegółów produktu" << endl;
@@ -13,18 +13,18 @@ void first_info()
      cout << endl;
 }
 
-bool your_choice_bool = false;//are we in your_choice function? 
+bool your_choice_bool = false; // are we in your_choice function?
 
-//get not empty string as input
-string getString(const string& msg)//msg is value which we put in and display here...
+// get not empty string as input
+string getString(const string &msg) // msg is value which we put in and display here...
 {
-     string input;//string tye input
+     string input; // string tye input
 
-     do//load nazwa untill is not empty - can be any type becouse its string, but can not be empty
+     do // load nazwa untill is not empty - can be any type becouse its string, but can not be empty
      {
-          cout <<msg;
+          cout << msg;
           cin >> input;
-          if (input.empty()) 
+          if (input.empty())
           {
                system("clear");
                cout << "Wartosc nie moze byc pusta! Wprowadz ponownie." << endl;
@@ -35,125 +35,150 @@ string getString(const string& msg)//msg is value which we put in and display he
      return input;
 }
 
-//get not empty float(with some conditions on it) as input
-float getFloat(const string& msg)//msg is value which we put in and display here...
+// get not empty float(with some conditions on it) as input
+float getFloat(const string &msg) // msg is value which we put in and display here...
 {
      float value;
      bool correct_float;
-     do {
-          cout <<msg;
+     do
+     {
+          cout << msg;
           cin >> value;
-          if (cin.fail() || value < 0) //cin.fail() - if typped other than declarated type, will return 1 so fail..
+          if (cin.fail() || value < 0) // cin.fail() - if typped other than declarated type, will return 1 so fail..
           {
                system("clear");
-              cout << "Wartosc musi byc liczba nieujemna! Wprowadz ponownie." << endl;
-              cin.clear(); //clear fail flag
-              cin.ignore();//clear buffor
-          } else {
-               correct_float = true;//correct data was written, change bool variable to true
+               cout << "Wartosc musi byc liczba nieujemna! Wprowadz ponownie." << endl;
+               cin.clear();  // clear fail flag
+               cin.ignore(); // clear buffor
           }
-      } while (!correct_float);//loop untill you get correct price\
+          else
+          {
+               correct_float = true; // correct data was written, change bool variable to true
+          }
+     } while (!correct_float); //loop untill you get correct price\
 
-      return value;
+     return value;
 }
 
-//get not empty int(with some conditions on it) as input
-int getInt(const string& msg)//msg is value which we put in and display here...
+// get not empty int(with some conditions on it) as input
+int getInt(const string &msg) // msg is value which we put in and display here...
 {
-     bool correct_int = false;//ilosc can not be <0 and have to be int
+     bool correct_int = false; // ilosc can not be <0 and have to be int
      int value;
-      do {
-          cout <<msg;
-          cin >> value;
-          if (cin.fail() || value < 0) //if <0 and not int, fail
+     do
+     {
+          if (cin.peek() == '\n')//this will check 1st char before data loading from cin - so it will get enter if clicked
+          { // if enter was clicked immediatyly (new line ) - peek will get this!
+               system("clear");
+               cout << "Wartosc nie moze byc pusta! Wprowadz ponownie." << endl;
+               first_info();
+               cout << msg;
+               cin >> value;
+          }
+          else//if not enter immediately
+          {
+               cout << msg;
+               cin >> value;
+          }
+
+          if (cin.fail() || value < 0) // if <0 and not int, fail
           {
                system("clear");
-              cout << "Wartosc musi byc liczba calkowita nieujemna! Wprowadz ponownie." << endl;
-              cin.clear();//clear error flag
-              cin.ignore();//clear buffor
-              if(your_choice_bool)//if we are in your_choice function now, print this
+               cout << "Wartosc musi byc liczba calkowita nieujemna! Wprowadz ponownie." << endl;
+               cin.clear();          // clear error flag
+               cin.ignore();         // clear buffor
+               if (your_choice_bool) // if we are in your_choice function now, print this
                {
                     cout << "1. Dodawanie nowych produktów do magazynu" << endl;
                     cout << "2. Usuwanie istniejących produktów" << endl;
                     cout << "3. Edytowanie szczegółów produktu" << endl;
                     cout << "4. Kopiowanie produktów" << endl;
                     cout << "5. Wyświetlanie zawartości magazynu" << endl;
-                    cout << "6. Wyjscie z aplikacji... " << endl<<endl;
+                    cout << "6. Wyjscie z aplikacji... " << endl
+                         << endl;
                }
-          } else {
-               correct_int = true;//correct data was written, change bool variable to true
           }
-      } while (!correct_int);//loop untill you get correct ilosc
+          else
+          {
+               correct_int = true; // correct data was written, change bool variable to true
+          }
+     } while (!correct_int); // loop untill you get correct ilosc
 
-      return value;
+     return value;
 }
 
-//get value 0,1,2 to use it later to enum type
-Kategoria getCategory(const string& msg)//msg is value which we put in and display here...
+// get value 0,1,2 to use it later to enum type
+Kategoria getCategory(const string &msg) // msg is value which we put in and display here...
 {
-       // based on enum type(so put 0,1 or 2)
-       bool correct_kategoria = false;
-       int value;
-       do {
-           cout <<msg;
-           cin >> value;
-           if (cin.fail() || value < 0 || value > 2) {//have to be int type, and have to be 0,1, or 2
+     // based on enum type(so put 0,1 or 2)
+     bool correct_kategoria = false;
+     int value;
+     do
+     {
+          cout << msg;
+          cin >> value;
+          if (cin.fail() || value < 0 || value > 2)
+          { // have to be int type, and have to be 0,1, or 2
                system("clear");
                cout << "Kategoria musi byc liczba calkowita od 0 do 2! Wprowadz ponownie." << endl;
-               cin.clear();//clear error flag
-               cin.ignore();//clear buffor
-           } else {
-            correct_kategoria = true;//correct data was written, change bool variable to true
-           }
-       } while (!correct_kategoria);//loop untill you get correct input
+               cin.clear();  // clear error flag
+               cin.ignore(); // clear buffor
+          }
+          else
+          {
+               correct_kategoria = true; // correct data was written, change bool variable to true
+          }
+     } while (!correct_kategoria); // loop untill you get correct input
 
-       return static_cast<Kategoria>(value);//int have to be changed on Kategoria type
+     return static_cast<Kategoria>(value); // int have to be changed on Kategoria type
 }
 
 int your_choice()
 {
-     your_choice_bool = true;//means that we are in this funciton right now!
+     your_choice_bool = true; // means that we are in this funciton right now!
 
-     //number of option(option is displayed in first_info())
+     // number of option(option is displayed in first_info())
      int temp1 = getInt("Wybor: ");
 
      if (temp1 < 1 || temp1 > 6) // can be only 1,2,3,4,5,6 - any over/bellow this is wrong choice! int type
      {
-          //manage wrong input (get input once again - will we get correct one!)
+          // manage wrong input (get input once again - will we get correct one!)
           system("clear");
           cout << "Wybor niepoprawny... " << endl;
-          cout << "Wybierz jeszcze raz!" << endl<<endl;
+          cout << "Wybierz jeszcze raz!" << endl
+               << endl;
 
           cout << "1. Dodawanie nowych produktów do magazynu" << endl;
           cout << "2. Usuwanie istniejących produktów" << endl;
           cout << "3. Edytowanie szczegółów produktu" << endl;
           cout << "4. Kopiowanie produktów" << endl;
           cout << "5. Wyświetlanie zawartości magazynu" << endl;
-          cout << "6. Wyjscie z aplikacji... " << endl<<endl;
+          cout << "6. Wyjscie z aplikacji... " << endl
+               << endl;
           cout << "Wybor: ";
           cin >> temp1;
      }
-     your_choice_bool = false;//means that we are leavig this funciton right now!
-     return temp1; // operation choise is returned
+     your_choice_bool = false; // means that we are leavig this funciton right now!
+     return temp1;             // operation choise is returned
 }
 
-void Magazyn::addItem()//add new item
+void Magazyn::addItem() // add new item
 {
      system("clear");
      cout << "1. Dodawanie nowych produktów do magazynu" << endl
           << endl;
 
-          string nazwa = getString("Nazwa: ");
-          float cena = getFloat("Cena: ");
-          int ilosc = getInt("Ilosc: ");
-          string opis = getString("Opis: ");
-          Kategoria kategoria = getCategory("Kategoria (0-ZWIERZETA, 1-ELEKTRONIKA, 2-DOM): ");
+     string nazwa = getString("Nazwa: ");
+     float cena = getFloat("Cena: ");
+     int ilosc = getInt("Ilosc: ");
+     string opis = getString("Opis: ");
+     Kategoria kategoria = getCategory("Kategoria (0-ZWIERZETA, 1-ELEKTRONIKA, 2-DOM): ");
 
      magazyn.push_back(Produkt<string, float, string, Kategoria>(nazwa, cena, ilosc, opis, kategoria)); // save this object in vector(i want Producs to have this type of arguments...)
      cout << "Produkt dodany!" << endl;                                                                 // inform that adding suceed
 }
 
-void Magazyn::deleteItem()//delete item from vector
+void Magazyn::deleteItem() // delete item from vector
 {
      system("clear");
      cout << "2. Usuwanie istniejących produktow" << endl
@@ -167,7 +192,7 @@ void Magazyn::deleteItem()//delete item from vector
                               return p.nazwa == nazwa; // return 1 if found item with typped by us fields(typped name exist)
                          });
 
-     if (it != magazyn.end())//if we did not get to the end of vector
+     if (it != magazyn.end())               // if we did not get to the end of vector
      {                                      // if iterator is not on the end of vector
           magazyn.erase(it, magazyn.end()); // means we found item, so can erase it!
           cout << "Produkt usuniety!" << endl;
@@ -178,17 +203,16 @@ void Magazyn::deleteItem()//delete item from vector
      }
 }
 
-void Magazyn::editItem()//edid existing in vector item
+void Magazyn::editItem() // edid existing in vector item
 {
      system("clear");
      cout << "3. Edytowanie szczegolow produktu" << endl
           << endl;
 
-   
-          string nazwa = getString("Nazwa do edycji przedmiotu: ");
+     string nazwa = getString("Nazwa do edycji przedmiotu: ");
 
-     for (auto &produkt : magazyn)//work on oryginal producs(reference)
-     { // iterate throw vector
+     for (auto &produkt : magazyn) // work on oryginal producs(reference)
+     {                             // iterate throw vector
           if (produkt.nazwa == nazwa)
           { // if your typeed name found...
 
@@ -196,7 +220,7 @@ void Magazyn::editItem()//edid existing in vector item
                produkt.cena = getFloat("Nowa cena: ");
                produkt.ilosc = getInt("Nowa ilosc: ");
                produkt.opis = getString("Nowy opis: ");
-               
+
                cout << "Produkt zaktualizowany!" << endl; // and inform that changed
                return;
           }
@@ -204,13 +228,12 @@ void Magazyn::editItem()//edid existing in vector item
      cout << "Nie znaleziono produktu!" << endl;
 }
 
-void Magazyn::copyItem()//copy item which exist in vector
+void Magazyn::copyItem() // copy item which exist in vector
 {
      system("clear");
      cout << "4. Kopiowanie produktów" << endl
           << endl;
 
-   
      string nazwa = getString("Nazwa do skopiowania przedmiotu: ");
 
      for (auto &produkt : magazyn)
@@ -225,7 +248,7 @@ void Magazyn::copyItem()//copy item which exist in vector
      cout << "Nie znaleziono produktu!" << endl;
 }
 
-void Magazyn::displayItems()//display all items which are in vector
+void Magazyn::displayItems() // display all items which are in vector
 {
      system("clear");
      cout << "5. Wyswietlanie zawartości magazynu" << endl
@@ -249,7 +272,7 @@ void open_fun(Magazyn &mag)
 { // this methor is to call method which you choose(with the argument of vector which collects items)
      while (true)
      {
-          first_info();//show possible operations to work on
+          first_info();            // show possible operations to work on
           int opt = your_choice(); // get value (number) of your method choose
 
           switch (opt)
