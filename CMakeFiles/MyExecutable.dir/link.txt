@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/MyExecutable.dir/main.cpp.o CMakeFiles/MyExecutable.dir/komendy.cpp.o  -o MyExecutable 
+/usr/bin/c++     CMakeFiles/MyExecutable.dir/main.cpp.o CMakeFiles/MyExecutable.dir/komendy.cpp.o CMakeFiles/MyExecutable.dir/inputProtection.cpp.o CMakeFiles/MyExecutable.dir/Magazyn.cpp.o  -o MyExecutable 

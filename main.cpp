@@ -4,6 +4,8 @@ using namespace std;
 
 #include "komendy.hpp"
 #include "obiekt.hpp"
+#include "Magazyn.hpp"
+#include "inputProtection.hpp"
 
 int main()
 {

@@ -123,6 +123,60 @@ MyExecutable/fast:
 	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/build
 .PHONY : MyExecutable/fast
 
+Magazyn.o: Magazyn.cpp.o
+
+.PHONY : Magazyn.o
+
+# target to build an object file
+Magazyn.cpp.o:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/Magazyn.cpp.o
+.PHONY : Magazyn.cpp.o
+
+Magazyn.i: Magazyn.cpp.i
+
+.PHONY : Magazyn.i
+
+# target to preprocess a source file
+Magazyn.cpp.i:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/Magazyn.cpp.i
+.PHONY : Magazyn.cpp.i
+
+Magazyn.s: Magazyn.cpp.s
+
+.PHONY : Magazyn.s
+
+# target to generate assembly for a file
+Magazyn.cpp.s:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/Magazyn.cpp.s
+.PHONY : Magazyn.cpp.s
+
+inputProtection.o: inputProtection.cpp.o
+
+.PHONY : inputProtection.o
+
+# target to build an object file
+inputProtection.cpp.o:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/inputProtection.cpp.o
+.PHONY : inputProtection.cpp.o
+
+inputProtection.i: inputProtection.cpp.i
+
+.PHONY : inputProtection.i
+
+# target to preprocess a source file
+inputProtection.cpp.i:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/inputProtection.cpp.i
+.PHONY : inputProtection.cpp.i
+
+inputProtection.s: inputProtection.cpp.s
+
+.PHONY : inputProtection.s
+
+# target to generate assembly for a file
+inputProtection.cpp.s:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/inputProtection.cpp.s
+.PHONY : inputProtection.cpp.s
+
 komendy.o: komendy.cpp.o
 
 .PHONY : komendy.o
@@ -186,6 +240,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MyExecutable"
+	@echo "... Magazyn.o"
+	@echo "... Magazyn.i"
+	@echo "... Magazyn.s"
+	@echo "... inputProtection.o"
+	@echo "... inputProtection.i"
+	@echo "... inputProtection.s"
 	@echo "... komendy.o"
 	@echo "... komendy.i"
 	@echo "... komendy.s"

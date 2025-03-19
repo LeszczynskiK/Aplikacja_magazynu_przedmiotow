@@ -11,12 +11,16 @@ set(CMAKE_C_STANDARD 99)#c version
 set(SOURCES
     main.cpp
     komendy.cpp
+    inputProtection.cpp
+    Magazyn.cpp
 )
 
 # Heading files
 set(HEADERS
     komendy.hpp
     obiekt.hpp
+    inputProtection.hpp
+    Magazyn.hpp
 )
 
 #Make executable file

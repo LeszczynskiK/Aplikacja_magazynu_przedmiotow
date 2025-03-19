@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/MyExecutable.dir/Magazyn.cpp.o"
+  "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/MyExecutable.dir/inputProtection.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/MyExecutable.dir/komendy.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/main.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles/MyExecutable.dir/main.cpp.o"
   )

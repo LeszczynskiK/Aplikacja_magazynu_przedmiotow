@@ -74,12 +74,12 @@ clean: CMakeFiles/MyExecutable.dir/clean
 CMakeFiles/MyExecutable.dir/all:
 	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/depend
 	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles --progress-num=1,2,3 "Built target MyExecutable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles --progress-num=1,2,3,4,5 "Built target MyExecutable"
 .PHONY : CMakeFiles/MyExecutable.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MyExecutable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MyExecutable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/CMakeFiles 0
 .PHONY : CMakeFiles/MyExecutable.dir/rule

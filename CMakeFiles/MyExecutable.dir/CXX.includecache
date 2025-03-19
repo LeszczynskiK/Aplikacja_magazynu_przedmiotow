@@ -6,9 +6,41 @@
 
 #IncludeRegexTransform: 
 
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.cpp
+Magazyn.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
+iostream
+-
+string
+-
+vector
+-
+algorithm
+-
+obiekt.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
+inputProtection.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.cpp
+inputProtection.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
+iostream
+-
+string
+-
+obiekt.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
+
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.cpp
 komendy.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
+Magazyn.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
 algorithm
 -
 
@@ -21,6 +53,24 @@ vector
 -
 obiekt.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
+inputProtection.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
+Magazyn.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
+
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/main.cpp
+iostream
+-
+string
+-
+komendy.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
+obiekt.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
+Magazyn.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
+inputProtection.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
 
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
 iostream
