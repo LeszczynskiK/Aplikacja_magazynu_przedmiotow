@@ -21,3 +21,12 @@ Technologie:
 4. Kontenery STL
 5. Obsługa wejścia/wyjścia
 
+Zabezpieczenia:
+1. przed wprowadzeniem danych o nieporządanym typie 
+2. przed pominięciem pól do wprowadzenia danych
+3. przed wprowadzeniem pustych danych
+
+Do kompilacji wykorzystano: CMake
+C++ w wersji: 14
+Licencja: MIT
+

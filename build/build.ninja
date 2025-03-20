@@ -73,6 +73,18 @@ build CMakeFiles/MyExecutable.dir/komendy.cpp.o: CXX_COMPILER__MyExecutable ../k
   OBJECT_DIR = CMakeFiles/MyExecutable.dir
   OBJECT_FILE_DIR = CMakeFiles/MyExecutable.dir
 
+build CMakeFiles/MyExecutable.dir/inputProtection.cpp.o: CXX_COMPILER__MyExecutable ../inputProtection.cpp || cmake_object_order_depends_target_MyExecutable
+  DEP_FILE = CMakeFiles/MyExecutable.dir/inputProtection.cpp.o.d
+  FLAGS = -g   -std=gnu++14
+  OBJECT_DIR = CMakeFiles/MyExecutable.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyExecutable.dir
+
+build CMakeFiles/MyExecutable.dir/Magazyn.cpp.o: CXX_COMPILER__MyExecutable ../Magazyn.cpp || cmake_object_order_depends_target_MyExecutable
+  DEP_FILE = CMakeFiles/MyExecutable.dir/Magazyn.cpp.o.d
+  FLAGS = -g   -std=gnu++14
+  OBJECT_DIR = CMakeFiles/MyExecutable.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyExecutable.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MyExecutable
@@ -81,7 +93,7 @@ build CMakeFiles/MyExecutable.dir/komendy.cpp.o: CXX_COMPILER__MyExecutable ../k
 #############################################
 # Link the executable MyExecutable
 
-build MyExecutable: CXX_EXECUTABLE_LINKER__MyExecutable CMakeFiles/MyExecutable.dir/main.cpp.o CMakeFiles/MyExecutable.dir/komendy.cpp.o
+build MyExecutable: CXX_EXECUTABLE_LINKER__MyExecutable CMakeFiles/MyExecutable.dir/main.cpp.o CMakeFiles/MyExecutable.dir/komendy.cpp.o CMakeFiles/MyExecutable.dir/inputProtection.cpp.o CMakeFiles/MyExecutable.dir/Magazyn.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MyExecutable.dir
   POST_BUILD = :

@@ -18,7 +18,6 @@ void open_fun(Magazyn &mag)//commands to manage warehouse
 { // this methor is to call method which you choose(with the argument of vector which collects items)
      while (true)
      {
-          first_info();            // show possible operations to work on
           int opt = your_choice(); // get value (number) of your method choose
 
           switch (opt)
