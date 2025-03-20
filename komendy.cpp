@@ -18,6 +18,9 @@ void open_fun(Magazyn &mag)//commands to manage warehouse
 { // this methor is to call method which you choose(with the argument of vector which collects items)
      while (true)
      {
+          first_info();
+          cout<<endl;
+     
           int opt = your_choice(); // get value (number) of your method choose
 
           switch (opt)
@@ -40,9 +43,9 @@ void open_fun(Magazyn &mag)//commands to manage warehouse
           case 6:
                exit(0);
           }
+          system("clear");
           cout << "Nacisnij Enter aby kontynuowac...";
           cin.ignore(); // clear buffor from old chars (is any left in buffor)
           cin.get();    // and wait wor any cin here to continue while(true)
-          system("clear");
      }
 }

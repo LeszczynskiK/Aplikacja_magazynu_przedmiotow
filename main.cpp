@@ -15,6 +15,8 @@ int main()
     cout << "Wybierz opcje, ktora chcesz uzyc:" << endl;
     cout << endl;
 
+    first_info();
+
     Magazyn magazyn; // create object magazyn
 
     open_fun(magazyn); // choose what you want to do now... - with the argument of exact Magazyn object(will work on this object all the time)

@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.cpp
-Magazyn.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
-
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
 iostream
 -
@@ -21,16 +17,6 @@ algorithm
 -
 obiekt.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
-inputProtection.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
-
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.cpp
-iostream
--
-string
--
-limits
--
 inputProtection.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
 
@@ -63,20 +49,6 @@ inputProtection.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
 Magazyn.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
-
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/main.cpp
-iostream
--
-string
--
-komendy.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/komendy.hpp
-obiekt.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
-Magazyn.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/Magazyn.hpp
-inputProtection.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/inputProtection.hpp
 
 /home/krzysiek89/Desktop/QT_aplikacje/SymulatorMagazynu/obiekt.hpp
 iostream
