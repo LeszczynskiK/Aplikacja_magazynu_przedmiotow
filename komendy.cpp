@@ -43,9 +43,12 @@ void open_fun(Magazyn &mag)//commands to manage warehouse
           case 6:
                exit(0);
           }
-          system("clear");
-          cout << "Nacisnij Enter aby kontynuowac...";
+          cout<<endl<<endl;
+          cout << "Nacisnij Enter aby kontynuowac..."<<endl;
           cin.ignore(); // clear buffor from old chars (is any left in buffor)
+          system("clear");
+          cout<<"Przejdz do menu wyboru!"<<endl;
           cin.get();    // and wait wor any cin here to continue while(true)
+          system("clear");
      }
 }
